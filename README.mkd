@@ -1,0 +1,30 @@
+Overview
+========
+
+This is an example of having a portable version of gnupg v1.4.x in windows. It is meant only for demonstration but you should make your own from source files.
+
+WARNING
+=======
+
+DO NOT USE THIS REPO DIRECTLY! Yes I'm of good intent and you can assume I'm of good intent but there's no guarantee these files haven't been tampered with. You should download the binary from gnupg.org, verify it, and use those files to build your own portable gnupg setup. Also I'm not going to keep this up to date with newer version of gpg. Currently this is using v1.4.14.
+
+See COPYING folder for all licensing. I believe in good faith this is all allowed by GPL but if not let me know and I'll take this repo down.
+
+Instructions
+============
+
+OK, with all the scary stuff out of the way here's how to actually use this.
+
+* go to [ftp.gnupg.org](ftp://ftp.gnupg.org/gcrypt/binary/) and download the latest binary. At least in firefox I can click on the "Last Modified" header and it will sort by last modify date. For example to setup this repo I used "gnupg-w32cli-1.4.14.exe". You should also download the .sig file and verify it hasn't been tampered with.
+* extract the exe somewhere. I used [7zip](http://www.7-zip.org/) to accomplish this.
+* create your portable directory somewhere and in it create two folders; `temp` and `gnupg_home`.
+* copy `_GPG_LOCAL.bat` from this repo over to the main folder. Obviously inspect the file to make sure it looks ok as this is the file that will launch everything.
+* copy `gpg.conf` from this repo's `gnupg_home` and place it in your `gnupg_home`. Again check it for anything you don't like.  Those preference lines at the bottom increase security by having you prefer the more secure SHA256 over SHA1.
+* copy the three files from the exe you extracted over to this portable version.  These are `gpg.exe`, `gpgkeys_hkp`, and `iconv.dll`.
+
+You can now double click on `_GPG_LOCAL.bat` and be at a command prompt to issue the standard gpg commands.
+
+References
+==========
+
+Initial help came from [this post](http://portableapps.com/node/10701#comment-133244) and I then updated it to where things are in 2013.
