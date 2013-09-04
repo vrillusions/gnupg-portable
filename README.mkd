@@ -1,4 +1,4 @@
-Overview
+Overview [![Project Status](http://stillmaintained.com/vrillusions/gnupg-portable.png)](http://stillmaintained.com/vrillusions/gnupg-portable)
 ========
 
 This is an example of having a portable version of gnupg v1.4.x in windows. It is meant only for demonstration but you should make your own from source files.
