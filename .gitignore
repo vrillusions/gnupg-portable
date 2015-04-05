@@ -1,1 +1,4 @@
-# empty gitignore
+pubring.*
+secring.*
+random_seed
+trustdb.*
